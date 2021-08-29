@@ -1,5 +1,5 @@
 import { getTypeColor, getColorType, DOT, TYPE } from "../objects/DOT.js"
-import * as arrayUtils from "..//utils/ArrayUtils.js";
+import * as arrayUtils from "../utils/ArrayUtils.js";
 
 const defaultWidth: number = 40;
 const defaultHeight: number = 30;

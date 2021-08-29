@@ -4,7 +4,9 @@ import * as generator from "../map/GenerateMap.js";
 
 let oldTarget : HTMLElement;
 
+console.log(1);
 export function activateDragPoints() {
+    console.log(2);
     const elements = document.getElementsByTagName("td");
 
     for (let i = 0; i < elements.length; i++) {

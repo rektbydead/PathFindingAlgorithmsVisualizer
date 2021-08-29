@@ -2,7 +2,9 @@ import * as app from "../app.js";
 import { getColorType, TYPE } from "../objects/DOT.js";
 import * as generator from "../map/GenerateMap.js";
 let oldTarget;
+console.log(1);
 export function activateDragPoints() {
+    console.log(2);
     const elements = document.getElementsByTagName("td");
     for (let i = 0; i < elements.length; i++) {
         elements[i].addEventListener("dragstart", (event) => {
