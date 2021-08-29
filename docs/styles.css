@@ -1,0 +1,85 @@
+* { padding: 0; margin: 0; }
+html, body{
+    min-height: 100% !important;
+    height: 100%;
+}
+
+table {
+    border: 1px solid black;
+
+    padding: 0px;
+    border-spacing: 0;
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+td, tr {
+    padding: 0px;
+    margin: 0px;
+
+    border: 0.01px solid black;
+    background-color: white;
+}
+
+button { 
+    margin-bottom: 20px;
+}
+
+#colorTransition {
+    opacity: 0.5;
+}
+
+.bigContainer {
+    opacity: 85%;
+    position: relative;
+    width: 70%;
+    height: 85%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    background-color: #F4B41A;
+
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.container {
+    width: 94%;
+    height: 90%;
+
+    border: 1px solid black;
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.config {
+    position: relative;
+    width: 20%;
+    height: 100%;
+
+
+    border: 1px solid red;
+}
+
+.table {
+    position: relative;
+    width: 80%;
+    height: 100%;
+}

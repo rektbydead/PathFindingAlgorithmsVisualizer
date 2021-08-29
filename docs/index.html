@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css"/>
+        <script type="module" src="./app.js" defer></script>
+    </head>
+    <body>
+        <div class="bigContainer">
+            <div class="container">
+                <div class="config">
+                    <button type="button" id="clearWall"> Clear Wall </button>
+
+                    <button type="button" id="randomAll"> Random All </button>
+        
+                    <button type="button" id="randomWalls"> Random Walls </button>
+        
+                    <input type="number" id="wallPercentage" placeholder="Walls percentage" value="20">
+            
+                    <select id="heuristicSelector">
+                        <option value="EUCLIDEAN">EUCLIDEAN</option>
+                        <option value="CHEBYSHEV">CHEBYSHEV</option>
+                        <option value="MANHATTAN">MANHATTAN</option>
+                    </select> 
+        
+                    <select id="algorithmSelector">
+                        <option value="ASTAR">AStar</option>
+                        <option value="DIJKSTRA">Dijkstra</option>
+                        <option value="BREADTHFIRSTSEARCH">Breadth-first search</option>
+                        <option value="DEPTHFIRSTSEARCH">Depth-first search</option>
+                    </select> 
+                </div>
+                <div class="table">
+
+                </div>
+            </div>
+        </div>
+
+        
+    </body>
+</html>
