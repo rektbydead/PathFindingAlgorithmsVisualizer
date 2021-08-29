@@ -2,7 +2,7 @@ import * as app from "../app.js";
 import { getColorType, getInverseType, TYPE } from "../objects/DOT.js";
 import * as generator from "../map/GenerateMap.js";
 
-let oldTarget : HTMLElement;
+//let oldTarget : HTMLElement;
 
 console.log(1);
 export function activateDragPoints() {
@@ -21,7 +21,7 @@ export function activateDragPoints() {
             const colorTarget = target.style.backgroundColor;
             event?.dataTransfer?.setData("background", colorTarget);
 
-            oldTarget = target;
+            //oldTarget = target;
         });
 
         elements[i].addEventListener("drop", (event) => { 
@@ -36,7 +36,7 @@ export function activateDragPoints() {
             }
 
             target.style.backgroundColor = data;
-            oldTarget.style.backgroundColor = "white";
+            //oldTarget.style.backgroundColor = "white";
 
             generator.redefinePoints();
             app.findPoint();
