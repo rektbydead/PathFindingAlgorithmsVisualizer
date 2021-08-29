@@ -8,7 +8,7 @@ export function activateCreateWallsEvent() {
         for (let x = 0; x < tr.children.length; x++) {
             const td = tr.children[x];
             td === null || td === void 0 ? void 0 : td.addEventListener("click", () => { changeColorInverse(td); });
-            td === null || td === void 0 ? void 0 : td.addEventListener("mouseenter", (e) => { (e.buttons > 0) ? changeColorInverse(td) : undefined; });
+            td === null || td === void 0 ? void 0 : td.addEventListener("mouseover", (e) => { (e.buttons > 0) ? changeColorInverse(td) : undefined; });
         }
     }
 }

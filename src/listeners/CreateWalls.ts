@@ -13,7 +13,7 @@ export function activateCreateWallsEvent() : void {
             
                     
             td?.addEventListener("click", () => { changeColorInverse(td) });
-            td?.addEventListener("mouseenter", (e) => { (e.buttons > 0) ? changeColorInverse(td) : undefined });
+            td?.addEventListener("mouseover", (e) => { (e.buttons > 0) ? changeColorInverse(td) : undefined });
         }
     }
 }
