@@ -7,11 +7,8 @@ import * as retraceUtils  from "./utils/RetracePathUtils.js";
 import * as BFS from "./algorithm/Breadth-first-search.js";
 import * as DFS from "./algorithm/Depth-First-Search.js";
 
-console.log("0");
 generator.generateEmptyMap();
-console.log("1");
 listener.activateListeners();
-console.log("2");
 
 function startAlgorithm(table : DOT[][]) : void {
     const select : HTMLSelectElement = document?.getElementById("algorithmSelector") as HTMLSelectElement;

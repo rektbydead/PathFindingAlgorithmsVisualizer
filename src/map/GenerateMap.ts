@@ -172,7 +172,6 @@ export function clearInvalidColors() : void {
 
 function colorIsValid(color : string) : boolean {
     const colorType = getColorType(color);
-    console.log(color);
     let types : TYPE[] = [TYPE.TRACKED, TYPE.VISITED, TYPE.NOT_VISITED];
     return !arrayUtils.containsType(types, colorType);
 }
