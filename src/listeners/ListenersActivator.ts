@@ -8,7 +8,7 @@ export function activateListeners() {
     buttonListener.activateButton();
     console.log("2");
     dragndropListener.activateDragPoints();
-    console.log("3");
+    console.log("3-");
     optionSelectorListener.activateOptionSelector();
     console.log("4");
     createWalls.activateCreateWallsEvent();
