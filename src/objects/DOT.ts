@@ -70,7 +70,7 @@ export function getInverseType(type: TYPE): TYPE {
         case TYPE.VISITED:
             return TYPE.WALL;
         case TYPE.NOT_VISITED:
-            return TYPE.NORMAL; 
+            return TYPE.WALL; 
         case TYPE.TRACKED:
             return TYPE.WALL;  
         case TYPE.END:
