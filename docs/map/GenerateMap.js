@@ -1,7 +1,7 @@
 import { getTypeColor, getColorType, TYPE } from "../objects/DOT.js";
 import * as arrayUtils from "../utils/ArrayUtils.js";
 const defaultWidth = 60;
-const defaultHeight = 30;
+const defaultHeight = 25;
 export let points = {
     startX: 5,
     startY: 5,
@@ -35,7 +35,6 @@ export function generateEmptyMap() {
         let line = document.createElement('tr');
         for (let x = 0; x < width; x++) {
             let child = document.createElement('td');
-            child.id = "colorTransition";
             child.draggable = true;
             if (x == points.startX && y == points.startY) {
                 child.style.backgroundColor = getTypeColor(TYPE.START);

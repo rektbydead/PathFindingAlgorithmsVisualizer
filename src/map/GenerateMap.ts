@@ -2,7 +2,7 @@ import { getTypeColor, getColorType, DOT, TYPE } from "../objects/DOT.js"
 import * as arrayUtils from "../utils/ArrayUtils.js";
 
 const defaultWidth: number = 60;
-const defaultHeight: number = 30;
+const defaultHeight: number = 25;
 
 export let points = {
     startX: 5,
@@ -45,7 +45,6 @@ export function generateEmptyMap() : void {
 
         for (let x : number = 0; x < width; x++) { 
             let child : HTMLTableCellElement = document.createElement('td');   
-            child.id = "colorTransition";
             child.draggable = true;
 
             if (x == points.startX && y == points.startY) { 
