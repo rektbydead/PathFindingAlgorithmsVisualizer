@@ -5,7 +5,6 @@ import * as generator from "../map/GenerateMap.js";
 let oldTarget : HTMLElement;
 
 export function activateDragPoints() {
-    console.log(2);
     const elements = document.getElementsByTagName("td");
 
     for (let i = 0; i < elements.length; i++) {
@@ -25,6 +24,10 @@ export function activateDragPoints() {
 
         elements[i].addEventListener("drop", (event) => { 
             event.preventDefault();
+
+            if (!oldTarget) {
+                return;
+            }
  
             let data : string = event?.dataTransfer?.getData("background") ?? "";
             const target = event.target as HTMLElement;

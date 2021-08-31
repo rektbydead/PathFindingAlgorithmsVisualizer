@@ -3,7 +3,6 @@ import { getColorType, TYPE } from "../objects/DOT.js";
 import * as generator from "../map/GenerateMap.js";
 let oldTarget;
 export function activateDragPoints() {
-    console.log(2);
     const elements = document.getElementsByTagName("td");
     for (let i = 0; i < elements.length; i++) {
         elements[i].addEventListener("dragstart", (event) => {
@@ -21,6 +20,9 @@ export function activateDragPoints() {
         elements[i].addEventListener("drop", (event) => {
             var _a, _b;
             event.preventDefault();
+            if (!oldTarget) {
+                return;
+            }
             let data = (_b = (_a = event === null || event === void 0 ? void 0 : event.dataTransfer) === null || _a === void 0 ? void 0 : _a.getData("background")) !== null && _b !== void 0 ? _b : "";
             const target = event.target;
             const color = target.style.backgroundColor;
