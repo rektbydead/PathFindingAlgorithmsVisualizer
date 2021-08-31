@@ -17,11 +17,11 @@ export function pickAlgorithm(table : DOT[][]) : void {
             AStar.find(table);
             break;
         }
-        case "BREADTHFIRSTSEARCH": {
+        case "BREADTH-FIRST-SEARCH": {
             BFS.find(table);
             break;
         }
-        case "DEPTHFIRSTSEARCH": {
+        case "DEPTH-FIRST-SEARCH": {
             DFS.find(table);
             break;
         }
