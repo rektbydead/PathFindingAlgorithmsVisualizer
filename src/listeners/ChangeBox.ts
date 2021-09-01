@@ -12,7 +12,7 @@ export function changeBox() {
 
         const elementToChange : HTMLSelectElement = document.getElementById('heuristicSelector') as HTMLSelectElement;
 
-        if (isHeuristic) {
+        if (!isHeuristic) {
             elementToChange.style.display = "none"
         }
         else { 

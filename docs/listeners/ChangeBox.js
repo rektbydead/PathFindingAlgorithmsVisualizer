@@ -6,7 +6,7 @@ export function changeBox() {
         console.log(value);
         let isHeuristic = value == "ASTAR" || value == "DIJKSTRA";
         const elementToChange = document.getElementById('heuristicSelector');
-        if (isHeuristic) {
+        if (!isHeuristic) {
             elementToChange.style.display = "none";
         }
         else {
