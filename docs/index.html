@@ -10,27 +10,33 @@
     </head>
     <body>
         <div class="config" id="config">
-            <button type="button" id="clearWall"> Clear Wall </button>
+            <div class="mapconfig">
+                <p id="MAP">Map Config</p>
+                <button type="button" id="clearWall"> Clear Wall </button>
 
-            <button type="button" id="randomAll"> Random All </button>
-        
-            <button type="button" id="randomWalls"> Random Walls </button>
-        
-            <input type="number" id="wallPercentage" placeholder="Walls percentage" value="20">
+                <button type="button" id="randomAll"> Random All </button>
             
-            <select id="algorithmSelector">
-                <option value="ASTAR">AStar</option>
-                <option value="DIJKSTRA">Dijkstra</option>
-                <option value="BREADTH-FIRST-SEARCH">Breadth-first search</option>
-                <option value="DEPTH-FIRST-SEARCH">Depth-first search</option>
-            </select> 
+                <button type="button" id="randomWalls"> Random Walls </button>
+            
+                <input type="number" id="wallPercentage" placeholder="Walls percentage" value="20">
+            </div>
+            
+            <hr style="width: 100%; margin: 5% 0%;"></hr>
 
-            <select id="heuristicSelector" style="display:none">
-                <option value="EUCLIDEAN">EUCLIDEAN</option>
-                <option value="CHEBYSHEV">CHEBYSHEV</option>
-                <option value="MANHATTAN">MANHATTAN</option>
-            </select> 
-        
+            <div class="algorithmConfig">
+                <select id="algorithmSelector">
+                    <option value="ASTAR">AStar</option>
+                    <option value="DIJKSTRA">Dijkstra</option>
+                    <option value="BREADTH-FIRST-SEARCH">Breadth-first search</option>
+                    <option value="DEPTH-FIRST-SEARCH">Depth-first search</option>
+                </select> 
+
+                <select id="heuristicSelector" style="display:none">
+                    <option value="EUCLIDEAN">EUCLIDEAN</option>
+                    <option value="CHEBYSHEV">CHEBYSHEV</option>
+                    <option value="MANHATTAN">MANHATTAN</option>
+                </select> 
+            </div>
         </div>
         <div class="table">
 

@@ -49,4 +49,8 @@ button {
     opacity: 0.9;
     background-color: grey;
     cursor: move;
+
+    border-radius: 10px;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
 }
