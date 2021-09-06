@@ -4,7 +4,7 @@ export function changeBox() {
     element === null || element === void 0 ? void 0 : element.addEventListener('change', (e) => {
         const value = element.value;
         console.log(value);
-        let isHeuristic = value == "ASTAR" || value == "DIJKSTRA";
+        let isHeuristic = value == "ASTAR" || value == "DIJKSTRA" || value == "BEST-FIRST-SEARCH";
         const elementToChange = document.getElementById('heuristicSelector');
         if (!isHeuristic) {
             elementToChange.style.display = "none";

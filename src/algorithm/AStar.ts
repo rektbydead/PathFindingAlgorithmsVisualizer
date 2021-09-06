@@ -21,7 +21,6 @@ export function find(table : DOT[][]) {
         node = getLowestF(open);
 
         open = ArrayUtils.removeFromArray(open, node);
-        
         closed.push(node);
 
         if (node.x == endNode.x && node.y == endNode.y) {
