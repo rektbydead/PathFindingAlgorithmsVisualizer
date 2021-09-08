@@ -2,16 +2,19 @@
 
 Preview link: https://rektbydead.github.io/PathFindingAlgorithmsVisualizer/index.html
 
-Algorithms included:
+# DONE
+Algorithms:
   - A*
   - Dijkstra
   - Best-first-search
   - Breadth-first-search
   - Depth-first-search
   
-Heuristics included (to be used by heuristic algortihms like A*): 
+Heuristics (to be used by heuristic algortihms like A*): 
   - Manhattan
   - Euclidean
   - Chebyshev
    
-  
+# TODO
+  - Change UI
+ 
