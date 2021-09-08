@@ -1,7 +1,6 @@
 # PathFindingAlgorithmsVisualizer
 
-Preview link: 
-https://rektbydead.github.io/PathFindingAlgorithmsVisualizer/index.html
+Preview link: https://rektbydead.github.io/PathFindingAlgorithmsVisualizer/index.html
 
 Algorithms included:
   - A*
@@ -10,8 +9,9 @@ Algorithms included:
   - Breadth-first-search
   - Depth-first-search
   
-  Heuristics included (to be used by heuristic algortihms like A*): 
-   - Manhattan
-   - Euclidean
-   - Chebyshev
+Heuristics included (to be used by heuristic algortihms like A*): 
+  - Manhattan
+  - Euclidean
+  - Chebyshev
    
+  
