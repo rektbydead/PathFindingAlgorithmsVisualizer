@@ -1,5 +1,8 @@
 # PathFindingAlgorithmsVisualizer
 
+Preview link: 
+https://rektbydead.github.io/PathFindingAlgorithmsVisualizer/index.html
+
 Algorithms included:
   - A*
   - Dijkstra
