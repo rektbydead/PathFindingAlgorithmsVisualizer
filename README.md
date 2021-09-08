@@ -1,7 +1,7 @@
 # PathFindingAlgorithmsVisualizer
 
 Preview link: https://rektbydead.github.io/PathFindingAlgorithmsVisualizer/index.html
-
+<br>
 # DONE
 Algorithms:
   - A*
