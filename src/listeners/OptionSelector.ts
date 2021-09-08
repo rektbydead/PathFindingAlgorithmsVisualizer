@@ -6,7 +6,7 @@ export function activateOptionSelector() {
         app?.findPoint();
     });
 
-    const select : HTMLSelectElement = document?.getElementById("algorithmSelector") as HTMLSelectElement;
+    const select : HTMLSelectElement = document?.getElementById("Diagonal") as HTMLSelectElement;
     select?.addEventListener("change", (event) => {
         app?.findPoint();
     });

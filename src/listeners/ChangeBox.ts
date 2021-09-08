@@ -1,4 +1,4 @@
-import { getColorType } from "../objects/DOT";
+import * as app from "../app.js";
 
 export function changeBox() {
     const element : HTMLSelectElement = document.getElementById('algorithmSelector') as HTMLSelectElement;
@@ -18,5 +18,12 @@ export function changeBox() {
         else { 
             elementToChange.style.display = "initial"
         }
+    });
+}
+
+export function checkBox() {
+    const select : HTMLSelectElement = document?.getElementById("algorithmSelector") as HTMLSelectElement;
+    select?.addEventListener("change", (event) => {
+        app?.findPoint();
     });
 }

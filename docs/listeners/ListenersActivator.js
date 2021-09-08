@@ -9,4 +9,5 @@ export function activateListeners() {
     optionSelectorListener.activateOptionSelector();
     createWalls.activateCreateWallsEvent();
     changeBox.changeBox();
+    changeBox.checkBox();
 }
