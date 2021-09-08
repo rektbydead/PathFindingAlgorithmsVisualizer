@@ -73,6 +73,50 @@ export function generateRandomWalls() {
         }
     }
 }
+//I have to redo this function...
+//if (efficiency == 0) redo
+export function generateRandomPoints() {
+    let x1 = Math.floor(Math.random() * defaultWidth);
+    let y1 = Math.floor(Math.random() * defaultHeight);
+    let x2 = Math.floor(Math.random() * defaultWidth);
+    let y2 = Math.floor(Math.random() * defaultHeight);
+    while (x1 == x2 && y1 == y2) {
+        x2 = Math.floor(Math.random() * defaultWidth);
+        y2 = Math.floor(Math.random() * defaultHeight);
+    }
+    const table = document.getElementsByTagName("table")[0];
+    const trs = table.getElementsByTagName("tr");
+    for (let y = 0; y < trs.length; y++) {
+        const tr = table.getElementsByTagName("tr")[y];
+        for (let x = 0; x < tr.children.length; x++) {
+            const td = tr.children[x];
+            const color = td.style.backgroundColor;
+            const type = getColorType(color);
+            if (!(type == TYPE.START || type == TYPE.END)) {
+                continue;
+            }
+            td.style.backgroundColor = getTypeColor(TYPE.NORMAL);
+        }
+    }
+    for (let y = 0; y < trs.length; y++) {
+        const tr = table.getElementsByTagName("tr")[y];
+        for (let x = 0; x < tr.children.length; x++) {
+            const td = tr.children[x];
+            const color = td.style.backgroundColor;
+            const type = getColorType(color);
+            /*if (!(type == TYPE.START || type == TYPE.END)) {
+                continue;
+            }*/
+            if (x1 == x && y1 == y) {
+                td.style.backgroundColor = getTypeColor(TYPE.START);
+            }
+            else if (x2 == x && y2 == y) {
+                td.style.backgroundColor = getTypeColor(TYPE.END);
+            }
+        }
+    }
+    redefinePoints();
+}
 export function clearWalls() {
     const table = document.getElementsByTagName("table")[0];
     const trs = table.getElementsByTagName("tr");
