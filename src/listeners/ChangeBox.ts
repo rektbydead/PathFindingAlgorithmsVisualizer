@@ -8,7 +8,7 @@ export function changeBox() {
         const value : string  = element.value;
         console.log(value);
         
-        let isHeuristic : boolean = value == "ASTAR" || value == "DIJKSTRA" || value == "BEST-FIRST-SEARCH";
+        let isHeuristic : boolean = value == "ASTAR" || value == "BEST-FIRST-SEARCH";
 
         const elementToChange : HTMLSelectElement = document.getElementById('heuristicSelector') as HTMLSelectElement;
 
