@@ -5,17 +5,17 @@ Preview link: https://rektbydead.github.io/PathFindingAlgorithmsVisualizer/index
 # DONE
 Algorithms:
   - A*
-  - Dijkstra
   - Best-first-search
+  - Dijkstra
   - Breadth-first-search
   - Depth-first-search
   
-Heuristics (to be used by heuristic algortihms like A*): 
+Heuristics (to be used by heuristic algorithms like A*): 
   - Manhattan
   - Euclidean
   - Chebyshev
    
 # TODO
   - Change UI
-  - Add diagonal movement (opticional)
+  - Add diagonal movement (optional)
  
