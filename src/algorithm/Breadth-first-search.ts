@@ -36,7 +36,6 @@ export function find(table : DOT[][]) {
 
             neighbor.parent = node;
             open.push(neighbor);
-
             retraceUtils.paintNode(neighbor, TYPE.NOT_VISITED, false);
         });
     }
