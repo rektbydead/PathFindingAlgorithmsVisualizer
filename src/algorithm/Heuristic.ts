@@ -26,8 +26,8 @@ function manhattan(dot1 : DOT, dot2 : DOT) : number {
 
 
 function euclidean(dot1 : DOT, dot2 : DOT) : number {
-    let distX : number = (dot2.x - dot1.x) ** 2;
-    let distY : number = (dot2.y - dot1.y) ** 2;
+    let distX : number =  Math.abs(dot2.x - dot1.x) ** 2;
+    let distY : number =  Math.abs(dot2.y - dot1.y) ** 2;
 
     return Math.sqrt(distX + distY);
 }

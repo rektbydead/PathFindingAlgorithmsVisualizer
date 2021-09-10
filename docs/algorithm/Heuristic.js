@@ -18,8 +18,8 @@ function manhattan(dot1, dot2) {
     return distX + distY;
 }
 function euclidean(dot1, dot2) {
-    let distX = Math.pow((dot2.x - dot1.x), 2);
-    let distY = Math.pow((dot2.y - dot1.y), 2);
+    let distX = Math.pow(Math.abs(dot2.x - dot1.x), 2);
+    let distY = Math.pow(Math.abs(dot2.y - dot1.y), 2);
     return Math.sqrt(distX + distY);
 }
 function chebyshev(dot1, dot2) {
