@@ -38,7 +38,7 @@ export function find(table : DOT[][]) {
             }
             
             let value = node.hCost + heuristic(node, neighbor);
-            if (value < neighbor.hCost/* || !ArrayUtils.contains(open, neighbor)*/) {
+            if (value < neighbor.hCost || !ArrayUtils.contains(open, neighbor)) {
                 neighbor.hCost = value;
                 neighbor.parent = node;
 
