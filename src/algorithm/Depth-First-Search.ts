@@ -30,7 +30,7 @@ export function find(table : DOT[][]) {
         let neighbors : Array<DOT> = AlgorithmUtils.getNeighbors(table, node);
 
         neighbors.forEach((neighbor) => {
-            if (neighbor.type == TYPE.WALL || ArrayUtils.contains(closed, neighbor)) {
+            if (ArrayUtils.contains(closed, neighbor)) {
                 return;
             }
 

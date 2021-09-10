@@ -13,17 +13,17 @@ export function heuristic(dot1, dot2) {
     }
 }
 function manhattan(dot1, dot2) {
-    let distX = Math.abs(dot1.x - dot2.x);
-    let distY = Math.abs(dot1.y - dot2.y);
+    let distX = Math.abs(dot2.x - dot1.x);
+    let distY = Math.abs(dot2.y - dot1.y);
     return distX + distY;
 }
 function euclidean(dot1, dot2) {
-    let distX = Math.pow(Math.abs(dot1.x - dot2.x), 2);
-    let distY = Math.pow(Math.abs(dot1.y - dot2.y), 2);
+    let distX = Math.pow((dot2.x - dot1.x), 2);
+    let distY = Math.pow((dot2.y - dot1.y), 2);
     return Math.sqrt(distX + distY);
 }
 function chebyshev(dot1, dot2) {
-    let distX = Math.abs(dot1.x - dot2.x);
-    let distY = Math.abs(dot1.y - dot2.y);
+    let distX = dot2.x - dot1.x;
+    let distY = dot2.y - dot1.y;
     return Math.max(distX, distY);
 }

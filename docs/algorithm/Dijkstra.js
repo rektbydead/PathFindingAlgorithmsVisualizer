@@ -7,13 +7,13 @@ import * as retraceUtils from "../utils/RetracePathUtils.js";
 export function find(table) {
     let open = [];
     let closed = [];
-    let node = table[points.startX][points.startY];
+    let startNode = table[points.startX][points.startY];
     let endNode = table[points.endX][points.endY];
     H(table);
-    node.hCost = 0;
-    open.push(node);
+    startNode.hCost = 0;
+    open.push(startNode);
     while (open.length > 0) {
-        node = getLowestH(open);
+        const node = getLowestH(open);
         open = ArrayUtils.removeFromArray(open, node);
         closed.push(node);
         if (node.x == endNode.x && node.y == endNode.y) {
@@ -23,11 +23,11 @@ export function find(table) {
         retraceUtils.paintNode(node, TYPE.VISITED, true);
         let neighbors = AlgorithmUtils.getNeighbors(table, node);
         neighbors.forEach((neighbor) => {
-            if (neighbor.type == TYPE.WALL || ArrayUtils.contains(closed, neighbor)) {
+            if (ArrayUtils.contains(closed, neighbor)) {
                 return;
             }
             let value = node.hCost + heuristic(node, neighbor);
-            if (value < neighbor.hCost || !ArrayUtils.contains(open, neighbor)) {
+            if (value < neighbor.hCost /* || !ArrayUtils.contains(open, neighbor)*/) {
                 neighbor.hCost = value;
                 neighbor.parent = node;
                 if (!ArrayUtils.contains(open, neighbor)) {

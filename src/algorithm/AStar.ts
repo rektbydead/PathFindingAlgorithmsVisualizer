@@ -19,8 +19,8 @@ export function find(table : DOT[][]) {
 
     while (open.length > 0) {
         node = getLowestF(open);
-
         open = ArrayUtils.removeFromArray(open, node);
+        
         closed.push(node);
 
         if (node.x == endNode.x && node.y == endNode.y) {
@@ -32,7 +32,7 @@ export function find(table : DOT[][]) {
 
         let neighbors : Array<DOT> = AlgorithmUtils.getNeighbors(table, node);
         neighbors.forEach((neighbor) => {
-            if (neighbor.type == TYPE.WALL || ArrayUtils.contains(closed, neighbor)) {
+            if (ArrayUtils.contains(closed, neighbor)) {
                 return; 
             }
             

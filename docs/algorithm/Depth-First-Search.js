@@ -21,7 +21,7 @@ export function find(table) {
         retraceUtils.paintNode(node, TYPE.VISITED, true);
         let neighbors = AlgorithmUtils.getNeighbors(table, node);
         neighbors.forEach((neighbor) => {
-            if (neighbor.type == TYPE.WALL || ArrayUtils.contains(closed, neighbor)) {
+            if (ArrayUtils.contains(closed, neighbor)) {
                 return;
             }
             neighbor.parent = node;

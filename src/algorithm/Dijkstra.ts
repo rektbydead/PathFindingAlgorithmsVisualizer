@@ -10,16 +10,15 @@ export function find(table : DOT[][]) {
     let open : Array<DOT> = [];
     let closed : Array<DOT> = [];
     
-    let node : DOT = table[points.startX][points.startY];
+    let startNode : DOT = table[points.startX][points.startY];
     let endNode : DOT = table[points.endX][points.endY]; 
     H(table);
 
-    node.hCost = 0;
-    open.push(node);
+    startNode.hCost = 0;
+    open.push(startNode);
 
     while (open.length > 0) {
-        node = getLowestH(open);
-
+        const node = getLowestH(open);
         open = ArrayUtils.removeFromArray(open, node);
 
         closed.push(node);
@@ -34,12 +33,12 @@ export function find(table : DOT[][]) {
         let neighbors : Array<DOT> = AlgorithmUtils.getNeighbors(table, node);
 
         neighbors.forEach((neighbor) => {
-            if (neighbor.type == TYPE.WALL || ArrayUtils.contains(closed, neighbor)) {
+            if (ArrayUtils.contains(closed, neighbor)) {
                 return; 
             }
             
             let value = node.hCost + heuristic(node, neighbor);
-            if (value < neighbor.hCost || !ArrayUtils.contains(open, neighbor)) {
+            if (value < neighbor.hCost/* || !ArrayUtils.contains(open, neighbor)*/) {
                 neighbor.hCost = value;
                 neighbor.parent = node;
 

@@ -18,23 +18,23 @@ export function heuristic(dot1 : DOT, dot2 : DOT) : number {
 }
 
 function manhattan(dot1 : DOT, dot2 : DOT) : number {
-    let distX : number = Math.abs(dot1.x - dot2.x);
-    let distY : number = Math.abs(dot1.y - dot2.y);
+    let distX : number = Math.abs(dot2.x - dot1.x);
+    let distY : number = Math.abs(dot2.y - dot1.y);
 
     return distX + distY;
 }
 
 
 function euclidean(dot1 : DOT, dot2 : DOT) : number {
-    let distX : number = Math.abs(dot1.x - dot2.x) ** 2;
-    let distY : number = Math.abs(dot1.y - dot2.y) ** 2;
+    let distX : number = (dot2.x - dot1.x) ** 2;
+    let distY : number = (dot2.y - dot1.y) ** 2;
 
     return Math.sqrt(distX + distY);
 }
 
 function chebyshev(dot1 : DOT, dot2 : DOT) : number {
-    let distX : number = Math.abs(dot1.x - dot2.x);
-    let distY : number = Math.abs(dot1.y - dot2.y);
+    let distX : number = dot2.x - dot1.x;
+    let distY : number = dot2.y - dot1.y;
 
 
     return Math.max(distX, distY);

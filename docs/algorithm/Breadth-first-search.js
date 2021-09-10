@@ -21,14 +21,12 @@ export function find(table) {
         retraceUtils.paintNode(node, TYPE.VISITED, true);
         let neighbors = AlgorithmUtils.getNeighbors(table, node);
         neighbors.forEach((neighbor) => {
-            if (neighbor.type == TYPE.WALL || ArrayUtils.contains(closed, neighbor)) {
+            if (ArrayUtils.contains(closed, neighbor) || ArrayUtils.contains(open, neighbor)) {
                 return;
             }
             neighbor.parent = node;
-            if (!ArrayUtils.contains(open, neighbor)) {
-                open.push(neighbor);
-                retraceUtils.paintNode(neighbor, TYPE.NOT_VISITED, false);
-            }
+            open.push(neighbor);
+            retraceUtils.paintNode(neighbor, TYPE.NOT_VISITED, false);
         });
     }
 }
