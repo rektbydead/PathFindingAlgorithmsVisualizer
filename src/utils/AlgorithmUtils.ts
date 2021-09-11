@@ -10,8 +10,8 @@ export function getNeighbors(table : DOT[][], dot : DOT) : Array<DOT> {
     let vertices: Array<number> = [1, 3, 7, 9];
     for(let x : number = dot.x - 1; x <= dot.x + 1; x++) {
         for(let y : number = dot.y - 1; y <= dot.y + 1; y++) {
-            const isVertices : boolean = vertices.indexOf(++check) != -1;
-            const allowVertices : boolean = element.checked;
+            const isVertex : boolean = vertices.indexOf(++check) != -1;
+            const allowVertex : boolean = element.checked;
 
             //dot is invalid
             if (x < 0 || y < 0 || x >= table.length || y >= table[0].length) {
@@ -28,7 +28,7 @@ export function getNeighbors(table : DOT[][], dot : DOT) : Array<DOT> {
                 continue;
             }
 
-            if (!allowVertices && isVertices){
+            if (!allowVertex && isVertex){
                 continue 
             }
             
@@ -37,4 +37,8 @@ export function getNeighbors(table : DOT[][], dot : DOT) : Array<DOT> {
     }
 
     return neighbors;
+}
+
+function checkIfVertexBlocked() {
+
 }
