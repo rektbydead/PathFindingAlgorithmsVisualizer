@@ -29,10 +29,10 @@ export function getNeighbors(table : DOT[][], dot : DOT) : Array<DOT> {
             }
 
             if (!allowVertex && isVertex){
-                continue 
+                continue;
             }
 
-            if (checkIfVertexIsBlocked(table, dot, table[x][y])) {
+            if (isVertex && checkIfVertexIsBlocked(table, dot, table[x][y])) {
                 continue;
             }
             
@@ -43,8 +43,27 @@ export function getNeighbors(table : DOT[][], dot : DOT) : Array<DOT> {
     return neighbors;
 }
 
-//TODO
-function checkIfVertexIsBlocked(table : DOT[][], dot : DOT, toCheckDot : DOT) : boolean {
+//REDO
+//Checking if there are 2 walls around the vertex
+function checkIfVertexIsBlocked(table : DOT[][], dot : DOT, vertex : DOT) : boolean {
+    const element : HTMLInputElement = document.getElementById('crossCorners') as HTMLInputElement;
 
-    return false;
+    if (element?.checked == true) {
+        return false;
+    }
+
+    let above : boolean = table[dot.x][dot.y - 1]?.type == TYPE.WALL ?? false; 
+    let bellow : boolean = table[dot.x][dot.y + 1]?.type == TYPE.WALL ?? false; 
+    let right : boolean = table[dot.x + 1][dot.y]?.type == TYPE.WALL ?? false; 
+    let left : boolean = table[dot.x - 1][dot.y]?.type == TYPE.WALL ?? false; 
+
+    if (dot.x > vertex.x && dot.y > vertex.y) {
+        return left && above;
+    } else if (dot.x < vertex.x && dot.y < vertex.y) {
+        return right && bellow;
+    } else if (dot.x < vertex.x && dot.y > vertex.y) {
+        return right && above;
+    }
+
+    return left && bellow;
 }
