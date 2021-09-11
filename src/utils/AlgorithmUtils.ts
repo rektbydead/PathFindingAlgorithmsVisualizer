@@ -31,6 +31,10 @@ export function getNeighbors(table : DOT[][], dot : DOT) : Array<DOT> {
             if (!allowVertex && isVertex){
                 continue 
             }
+
+            if (checkIfVertexIsBlocked(table, dot, table[x][y])) {
+                continue;
+            }
             
             neighbors.push(table[x][y]);
         }
@@ -39,6 +43,8 @@ export function getNeighbors(table : DOT[][], dot : DOT) : Array<DOT> {
     return neighbors;
 }
 
-function checkIfVertexBlocked() {
+//TODO
+function checkIfVertexIsBlocked(table : DOT[][], dot : DOT, toCheckDot : DOT) : boolean {
 
+    return false;
 }

@@ -23,10 +23,15 @@ export function getNeighbors(table, dot) {
             if (!allowVertex && isVertex) {
                 continue;
             }
+            if (checkIfVertexIsBlocked(table, dot, table[x][y])) {
+                continue;
+            }
             neighbors.push(table[x][y]);
         }
     }
     return neighbors;
 }
-function checkIfVertexBlocked() {
+//TODO
+function checkIfVertexIsBlocked(table, dot, toCheckDot) {
+    return false;
 }
