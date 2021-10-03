@@ -17,5 +17,4 @@ Heuristics (to be used by heuristic algorithms like A*):
    
 # TODO
   - Change UI
-  - Add diagonal movement (optional)
- 
+
