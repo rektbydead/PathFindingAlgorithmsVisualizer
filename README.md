@@ -17,4 +17,5 @@ Heuristics (to be used by heuristic algorithms like A*):
    
 # TODO
   - Change UI
-
+  - Improve code
+  - Try to implements the algorithms recursivly 
